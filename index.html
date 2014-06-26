@@ -7,13 +7,14 @@
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
 		<link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
-		<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.2.1/bootstrap-social.css" rel="stylesheet">
 		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.2.1/bootstrap-social.min.css" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.2.3/css/foundation.css" rel="stylesheet">
 		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.2.3/css/foundation.min.css" rel="stylesheet">
-		
+		<script type="text/javascript" src="res/js/tabletop.js"></script>
+
 		<!-- Put in CSS -->
 		<style type="text/css">
 		    h1 {
@@ -38,5 +39,22 @@
 		<h3>Find Yours.</h3>
 		<!-- some sort of angular to repeat table with google docs backend. -->
 		<a href="#" class="button [radius round]">Get Started.</a>
+
+		<script type="text/javascript">
+			window.onload = function() { init() };
+
+			var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0AvFQKcZtfnKZdHV5N2tRMzJmOTZ1V3RLdnktS0pkZFE&output=html';
+
+			function init() {
+				Tabletop.init( { key: public_spreadsheet_url,
+												callback: showInfo,
+												simpleSheet: true } )
+			}
+
+			function showInfo(data, tabletop) {
+				alert("Successfully processed!")
+				console.log(data);
+			}
+		</script>
 	</body>
 </html>
