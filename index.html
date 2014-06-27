@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="">
 	<head>
 		<meta charset="UTF-8">
 		<title>HackList</title>
-
-		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400' rel='stylesheet' type='text/css'>
+		<!-- https://spreadsheets.google.com/feeds/list/0AvFQKcZtfnKZdHV5N2tRMzJmOTZ1V3RLdnktS0pkZFE/od6/public/values?alt=json -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
 		<link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css" rel="stylesheet">
 		<script type="text/javascript" src="res/js/tabletop.js"></script>
 		<script type="text/javascript" src="res/js/smooth-scroll.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
 
 		<!-- Put in CSS -->
 		<style type="text/css">
 		    h1 {
-		    font-family: 'Roboto Condensed', sans-serif;
+		    font-family: 'Roboto', sans-serif;
 		    font-weight: 300;
 		    text-align:center;
 		    }
 
 		    h3 {
-		    font-family: 'Roboto Condensed', sans-serif;
+		    font-family: 'Roboto', sans-serif;
 		    font-weight: 300;
 		    text-align:center;
 		    }
@@ -48,18 +48,6 @@
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
       <li><a href="#">API</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li class="divider"></li>
-          <li class="dropdown-header">Dropdown header</li>
-          <li><a href="#">Separated link</a></li>
-          <li><a href="#">One more separated link</a></li>
-        </ul>
-      </li>
     </ul>
     <form class="navbar-form navbar-left">
       <input type="text" class="form-control col-lg-8" placeholder="Search">
