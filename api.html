@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+  <head>
+    <meta charset="UTF-8">
+    <title>HackList</title>
+    <!-- https://spreadsheets.google.com/feeds/list/0AvFQKcZtfnKZdHV5N2tRMzJmOTZ1V3RLdnktS0pkZFE/od6/public/values?alt=json -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="res/js/tabletop.js"></script>
+    <script type="text/javascript" src="res/js/app.js"></script>
+    <script type="text/javascript" src="res/js/smooth-scroll.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+
+    <!-- Put in CSS -->
+    <style type="text/css">
+        h2 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        text-align:center;
+        }
+
+        h3 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        text-align:center;
+        }
+
+        .love {
+          text-align:center;
+        }
+
+  </style>
+
+  </head>
+
+  <body>
+    <!-- Header -->
+<div class="navbar navbar-inverse">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">HackLog</a>
+  </div>
+  <div class="navbar-collapse collapse navbar-inverse-collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Home</a></li>
+      <li class="active"><a href="#">API</a></li>
+    </ul>
+    <form class="navbar-form navbar-left">
+      <input type="text" class="form-control col-lg-8" placeholder="Search">
+    </form>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </div>
+</div>
+    <!-- Start Body-->
+    <div id="intro">
+      <h2>Want access to our hackathon data?</h2>
+      <h3>Sure thing.</h3>
+      <div class="jumbotron">
+        <h1>HackLog API</h1>
+        <p>GET <a href="http://website.com/example.json">http://website.com/example.json</a></p>
+        <p>Seriously that's it. Hack to your heart's content.</p>
+        <p><a class="btn btn-primary btn-lg">Learn more</a></p>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      window.onload = function() { init() };
+
+      var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0AvFQKcZtfnKZdHV5N2tRMzJmOTZ1V3RLdnktS0pkZFE&output=html';
+
+      function init() {
+        Tabletop.init( { key: public_spreadsheet_url,
+                        callback: showInfo,
+                        simpleSheet: true } )
+      }
+
+      function showInfo(data, tabletop) {
+        console.log(data);
+      }
+    </script>
+
+    <script>
+      smoothScroll.init();
+    </script>
+
+      <p class="love">We ♥ Hackathons.</p>
+  </body>
+</html>
