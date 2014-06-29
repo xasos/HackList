@@ -8,7 +8,7 @@
 		<link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css" rel="stylesheet">
 		<script type="text/javascript" src="res/js/tabletop.js"></script>
 		<script type="text/javascript" src="res/js/app.js"></script>
-		<script type="text/javascript" src="res/js/smooth-scroll.js"></script>
+		<script type="text/javascript" src="res/js/scrolld.min.js"></script>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
 
 		<!-- Put in CSS -->
@@ -69,7 +69,7 @@
 
 			<h3>Find Yours.</h3>
 			<!-- some sort of angular to repeat table with google docs backend. -->
-			<button type="button" class="btn btn-primary btn-lg" data-scroll data-options="easing: linear" a href="#sup">Legggo</button>
+			<a id='useBtn' href="#sup"><button type="button" class="btn btn-primary btn-lg" >Legggo</button></a>
 		</div>
 
 		<script type="text/javascript">
@@ -88,8 +88,8 @@
 			}
 		</script>
 
-		<script>
-    	smoothScroll.init();
+		<script type="text/javascript">
+		$("[id*='Btn']").stop(true).on('click',function(e){e.preventDefault();$(this).scrolld();})
 		</script>
 
 			<p class="sup">sup</P>
