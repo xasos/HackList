@@ -10,6 +10,7 @@
 		<script type="text/javascript" src="res/js/app.js"></script>
 		<script type="text/javascript" src="res/js/scrolld.min.js"></script>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 
 		<!-- Put in CSS -->
 		<style type="text/css">
@@ -80,16 +81,14 @@
 			function init() {
 				Tabletop.init( { key: public_spreadsheet_url,
 												callback: showInfo,
+												proxy: 'https://hacklog.s3.amazonaws.com/',
+												debug: true,
 												simpleSheet: true } )
 			}
 
 			function showInfo(data, tabletop) {
 				console.log(data);
 			}
-		</script>
-
-		<script type="text/javascript">
-		$("[id*='Btn']").stop(true).on('click',function(e){e.preventDefault();$(this).scrolld();})
 		</script>
 
 			<p class="sup">sup</P>
