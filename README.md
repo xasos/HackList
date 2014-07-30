@@ -5,6 +5,7 @@ HackLog is a simple webpage to display upcoming hackathons.
 #### Features
 
 * Used AngularJS on the frontend to display data and a Google Docs Spreadsheet to manage the data for the backend.
+* Currently caches all data at 3pm through Heroku Scheduler to improve speed and guard against possible mistakes in Google Spreadsheet.
 
 ## License
 
